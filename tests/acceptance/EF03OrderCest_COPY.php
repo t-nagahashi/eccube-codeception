@@ -426,6 +426,7 @@ class EF03OrderCest_COPY
         $I->click('#main_middle .total_box .btn_group p a');
 
         // 確認
+        $I->see('郵便振替', '#shopping_payment_1');
         $I->see('ご注文内容のご確認', '#main_middle .page-heading');
         $I->see('お客様情報', '#main_middle #shopping-form #confirm_main');
         $I->see('配送情報', '#main_middle #shopping-form #confirm_main');
@@ -531,6 +532,7 @@ class EF03OrderCest_COPY
         $I->click('#main_middle .total_box .btn_group p a');
 
         // 確認
+        $I->see('郵便振替', '#shopping_payment_1');
         $I->see('ご注文内容のご確認', '#main_middle .page-heading');
         $I->see('お客様情報', '#main_middle #shopping-form #confirm_main');
         $I->see('配送情報', '#main_middle #shopping-form #confirm_main');
