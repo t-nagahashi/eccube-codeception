@@ -7,7 +7,7 @@ use Codeception\Util\Fixtures;
  * @group order
  * @group ef3
  */
-class COPY_EF03OrderCest
+class EF99OrderCest
 {
     public function _before(\AcceptanceTester $I)
     {
