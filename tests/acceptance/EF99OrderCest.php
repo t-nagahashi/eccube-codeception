@@ -23,7 +23,7 @@ class EF99OrderCest
         $I->loginAsAdmin();
 
         // Go to Shop Setting page.
-        $I->amOnPage('/admin/setting/shop');
+        $I->amOnPage('/setting/shop');
         $I->fillField(['id' => 'shop_master_option_multiple_shipping_1'], 1);
 
         // Click submit button
@@ -31,12 +31,12 @@ class EF99OrderCest
         $I->see('基本情報を保存しました。', '#main_middle .page-heading');
 
         //change パーコレーター  product type
-        $I->amOnPage('/admin/product/product/2/edit');
+        $I->amOnPage('/product/product/2/edit');
         $I->fillField(['id' => 'admin_product_class_product_type'], 2);
         $I->click('#common_button_box__insert_button button');
 
         //Change payment method
-        $I->amOnPage('/admin/setting/shop/delivery/2/edit');
+        $I->amOnPage('/setting/shop/delivery/2/edit');
         //set 郵便振替 is enable and other is not enable
         $I->fillField(['id' => 'delivery_payments_1'], 1);
         $I->fillField(['id' => 'delivery_payments_2'], 0);
@@ -45,7 +45,7 @@ class EF99OrderCest
         $I->click('#common_button_box__insert_button button');
 
         //Delivery set payment method
-        $I->amOnPage('/admin/setting/shop/delivery/1/edit');
+        $I->amOnPage('/setting/shop/delivery/1/edit');
 
         //set 現金書留 is enable and other is not enable
         $I->fillField(['id' => 'delivery_payments_1'], 0);
