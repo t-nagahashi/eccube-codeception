@@ -17,7 +17,6 @@ class EF05MypageCest
 
     public function _after(\AcceptanceTester $I)
     {
-        $I->logoutAsMember();
     }
 
     public function mypage_初期表示(\AcceptanceTester $I)

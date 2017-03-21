@@ -38,7 +38,6 @@ class EF03OrderMultiShippingCest
 
     public function _after(\AcceptanceTester $I)
     {
-        $I->logoutAsMember();
     }
 
     /**
