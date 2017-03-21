@@ -12,10 +12,12 @@ class EF05MypageCest
 {
     public function _before(\AcceptanceTester $I)
     {
+        $I->logoutAsMember();
     }
 
     public function _after(\AcceptanceTester $I)
     {
+        $I->logoutAsMember();
     }
 
     public function mypage_初期表示(\AcceptanceTester $I)
