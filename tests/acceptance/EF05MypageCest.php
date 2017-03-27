@@ -111,7 +111,7 @@ class EF05MypageCest
         $I->amOnPage('/mypage');
         $I->click('お気に入り一覧');
         $I->wait(1);
-        $I->see('パーコレーター', '#main_middle .container-fluid #item_list #favorite__list--2 #favorite_list__name--2');
+        $I->see(' パーコレーター', '#main_middle .container-fluid #item_list');
 
         // お気に入りを削除
         $I->click('#main_middle .container-fluid #item_list .btn_circle');
