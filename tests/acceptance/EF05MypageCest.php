@@ -105,7 +105,7 @@ class EF05MypageCest
 
         // お気に入り登録
         $I->amOnPage('/products/detail/2');
-        $I->click('#favorite');
+        $I->click('お気に入りに追加');
 
         $I->amOnPage('/mypage');
         $I->click('お気に入り一覧');
