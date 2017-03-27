@@ -96,10 +96,11 @@ class EF05MypageCest
 
         // TOPページ>マイページ>ご注文履歴
         $I->amOnPage('/mypage');
-        $I->click('#main_middle .local_nav ul li:nth-child(2) a');
+        $I->click('お気に入り一覧');
+        $I->wait(1);
 
         // 最初はなにも登録されていない
-        $I->see('お気に入り一覧', '#main_middle .page-heading');
+        $I->see('マイページ/お気に入り一覧', '#main_middle .page-heading');
         $I->see('お気に入りが登録されていません。', '#main_middle .container-fluid .intro');
 
         // お気に入り登録
@@ -107,7 +108,8 @@ class EF05MypageCest
         $I->click('#favorite');
 
         $I->amOnPage('/mypage');
-        $I->click('#main_middle .local_nav ul li:nth-child(2) a');
+        $I->click('お気に入り一覧');
+        $I->wait(1);
         $I->see('パーコレーター', '#main_middle .container-fluid #item_list');
 
         // お気に入りを削除
