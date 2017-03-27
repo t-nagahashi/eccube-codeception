@@ -92,6 +92,7 @@ class EF05MypageCest
         $I->wantTo('EF0508-UC01-T01 Mypage お気に入り一覧');
         $createCustomer = Fixtures::get('createCustomer');
         $customer = $createCustomer();
+        $I->setStock(2, 10);
         $I->loginAsMember($customer->getEmail(), 'password');
 
         // TOPページ>マイページ>ご注文履歴
