@@ -38,7 +38,10 @@ class EF03OrderMultiShippingCest
 
     public function _after(\AcceptanceTester $I)
     {
-        $I->loginAsAdmin();
+        $shopPage = \Page\Admin\ShopSettingPage::go($I);
+        $shopPage->changeMultiShipping('無効');
+        $shopPage->登録();
+
         $productEditPage = \Page\Admin\ProductEditPage::go($I, 2);
         $productEditPage->changeProductType(1);
         $productEditPage->登録();
