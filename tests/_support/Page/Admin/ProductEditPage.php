@@ -17,6 +17,9 @@ class ProductEditPage extends AbstractAdminPage
     public static $お届可能日 = ['id' => 'admin_product_class_delivery_date'];
     public static $productType = ['id' => 'admin_product_class_product_type'];
 
+    public static $status = 'form input[name=admin_product\[Status\]]';
+
+
     /**
      * ProductRegisterPage constructor.
      */
@@ -77,6 +80,20 @@ class ProductEditPage extends AbstractAdminPage
     public function changeProductType($value, $type = 'value')
     {
         $this->tester->selectOption(self::$productType, array($type => $value));
+
+        return $this;
+    }
+
+    /**
+     * Change status
+     * value = 無効/有効
+     *
+     * @param string $value
+     * @return $this
+     */
+    public function changeStatus($value = '公開')
+    {
+        $this->tester->selectOption(self::$status, $value);
 
         return $this;
     }
