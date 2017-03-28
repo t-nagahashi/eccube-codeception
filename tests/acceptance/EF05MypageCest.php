@@ -16,6 +16,7 @@ class EF05MypageCest
         $createCustomer = Fixtures::get('createCustomer');
         $customer = $createCustomer();
         $I->setStock(2, 10);
+
         $I->loginAsMember($customer->getEmail(), 'password');
 
         // TOPページ>マイページ>ご注文履歴
