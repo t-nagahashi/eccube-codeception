@@ -35,9 +35,9 @@ class EF05MypageCest
         $I->click('#main_middle .local_nav ul li:nth-child(2) a');
         $count = $I->grabTextFrom('#main_middle #favorite_lst__total_item_count');
         codecept_debug($count);
-        $text = $I->grabTextFrom('#main_middle #item_list');
+        $text = $I->grabTextFrom('#main_middle #item_list #favorite_list__name--2');
         codecept_debug($text);
-        $I->see('パーコレーター', '#main_middle #item_list');
+        $I->see('パーコレーター', '#main_middle #item_list #favorite_list__name--2');
 
         // お気に入りを削除
         $I->click('#main_middle .container-fluid #item_list .btn_circle');
