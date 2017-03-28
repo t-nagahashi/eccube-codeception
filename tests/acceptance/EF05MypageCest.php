@@ -29,7 +29,7 @@ class EF05MypageCest
 
         // お気に入り登録
         $I->amOnPage('/products/detail/2');
-        $I->see('パーコレーター', '#main_middle #detail_description_box__name');
+        $I->see('パーコレーター', '#main_middle #item_detail #detail_wrap #item_detail_area h3');
         $I->click('#favorite');
 
         $I->amOnPage('/mypage');
