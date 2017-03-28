@@ -33,7 +33,7 @@ class EF03OrderMultiShippingCest
 
         $productEditPage = \Page\Admin\ProductEditPage::go($I, 2);
         $productEditPage->changeProductType(2);
-        $productEditPage->changeStatus('公開');
+//        $productEditPage->changeStatus('公開');
         $productEditPage->登録();
     }
 
