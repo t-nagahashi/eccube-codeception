@@ -44,6 +44,7 @@ class EF03OrderMultiShippingCest
 
         $productEditPage = \Page\Admin\ProductEditPage::go($I, 2);
         $productEditPage->changeProductType(1);
+        $productEditPage->changeStatus();
         $productEditPage->登録();
     }
 
