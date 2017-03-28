@@ -33,19 +33,12 @@ class EF03OrderMultiShippingCest
 
         $productEditPage = \Page\Admin\ProductEditPage::go($I, 2);
         $productEditPage->changeProductType(2);
+        $productEditPage->入力_商品名('パーコレーター');
         $productEditPage->登録();
     }
 
     public function _after(\AcceptanceTester $I)
     {
-        $shopPage = \Page\Admin\ShopSettingPage::go($I);
-        $shopPage->changeMultiShipping('無効');
-        $shopPage->登録();
-
-        $productEditPage = \Page\Admin\ProductEditPage::go($I, 2);
-        $productEditPage->changeProductType(1);
-        $productEditPage->changeStatus();
-        $productEditPage->登録();
     }
 
     /**
