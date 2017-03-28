@@ -33,7 +33,7 @@ class EF05MypageCest
 
         $I->amOnPage('/mypage');
         $I->click('#main_middle .local_nav ul li:nth-child(2) a');
-        $I->see('パーコレーター', '#main_middle .container-fluid #item_list');
+        $I->see('パーコレーター');
 
         // お気に入りを削除
         $I->click('#main_middle .container-fluid #item_list .btn_circle');
